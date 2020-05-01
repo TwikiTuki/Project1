@@ -1,0 +1,60 @@
+
+body{
+  background: #dbd8d7;
+}
+h1
+{
+  font-size: 50px;
+  color: #db4f0d;
+  text-align: center;
+  background-color: #9c928e;
+}
+img
+{
+  width: 80%;
+  height: 700px;
+}
+
+input
+{
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.button
+{
+  background-color: #ed814e;
+  width: 80px;
+  height: 70px;
+  padding: 5px;
+  margin: 3px;
+  color:red;
+  text-align: center;
+
+}
+
+.container, h1, img, .centered
+{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #9c928e;
+}
+
+@media (max-width: 700px)
+{
+  .container
+  {
+    width: 100%;
+    display:block;
+  }
+}
+
+@media (min-width: 701px)
+{
+  .container
+  {
+    width: 50%;
+  }
+}

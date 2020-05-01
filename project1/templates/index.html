@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+    <style>
+      .bigButton
+      {
+        width: 50%;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 23px;
+      }
+      a, a:visited {
+        color: #3d3d3d;
+      }
+      a:hover
+      {
+        color: white;
+      }
+    </style>
+  </head>
+  <body >
+    <h1>HELLO WORLD !!!!</h1>
+    <div class="container"  style="display:flex;">
+        <div class="button bigButton" >
+          <p><a class="button" href="login">Login</a></p>
+        </div>
+
+        <div class="button bigButton">
+          <p><a class="button" href="{{ url_for('signin') }}">SingIn</a></p>
+        </div>
+    </div>
+  </body>
+</html>

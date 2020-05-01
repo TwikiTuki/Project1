@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SignIn</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+  </head>
+  <body>
+    <div class="container">
+      <form class="" action= {{ url_for('signin') }} method="post">
+        <input type="text" name="name" placeholder="First name">
+        <input type="text" name="second_name" placeholder="Second name">
+        <input type="text" name="user_id" placeholder="User name">
+        <input type="password" name="pasword" placeholder="Enter your pasword">
+        <input type="password" name="pasword2" placeholder="Repat your pasword"> <br>
+        <input type="submit">
+      </form>
+
+    </div>
+
+  </body>
+</html>
