@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Treballant al direcotri:"
+echo "   $(pwd)"
+export PATH=$PATH"/home/twikituki/.local/lib/python3.8/site-packages"
+export FLASK_APP=application.py
+export FLASK_DEBUG=1
+export DATABASE_URL=postgres://odkxbcsvnuccrz:a8e7f5f7cea8c2bb29dd2c8a699668e18b8af56495802a4aa6d719bdd1c027fc@ec2-54-217-213-79.eu-west-1.compute.amazonaws.com:5432/d5dv0r5esij7ss
+
+echo "Max books:"$1
+python3 import.py $1

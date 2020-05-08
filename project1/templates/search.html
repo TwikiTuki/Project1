@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block head %}
+  <title>Search</title>
+
+{% endblock%}
+
+{% block body %}
+  <div class="container">
+    <form class="centered" action= {{ url_for('search') }} method="post">
+        <input type="text" name="title" placeholder="Book title">
+        <input type="text" name="author" placeholder="Author name">
+        <input type="text" name="isbn" placeholder="isnb nubmer">
+
+        <input type="submit" class="button centered">
+    </form>
+  </div>
+  {% if books %}
+  <div class="container">
+      <table class="table">
+        <tbody>
+          <tr class="tr">
+            <th>ISBN</th>
+            <th>TITLE</th>
+            <th>AUTHOR</th>
+          </tr>
+        {% for book in books %}
+          <tr class="tr">
+            <td> <a class="tda" href="/book/{{ book['isbn'] }}"> {{ book['isbn'] }} </a> </td>
+            <td> <a class="tda" href="/book/{{ book['isbn'] }}"> {{ book['title'] }} </a> </td>
+            <td> <a class="tda" href="/book/{{ book['isbn'] }}"> {{ book['author'] }} </a> </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </ul>
+
+      </table>
+  </div>
+  {% endif %}
+{% endblock %}

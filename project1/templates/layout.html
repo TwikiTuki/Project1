@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+    {% block head%}
+    {% endblock%}
+  </head>
+  <body >
+    <h1>BOOKS BUUKS BUUGS</h1>
+    <h1> Error 500 :)</h1>
+    <div style="float:right;">
+      <a href="/" style=";"><span class="red">Index</span></a>
+      {% if logged() %}
+        <a href="/logout" style="margin:15px;"><span class="red">LogOut</span></a>
+
+      {% endif %}
+    </div>
+
+      {% block body %}
+      {% endblock %}
+  </body>
+</html>

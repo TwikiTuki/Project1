@@ -1,3 +1,25 @@
-Not implemented
+{% extends 'layout.html' %}
+{% block head %}
+  <title>Login </title>
 
-/css/master.css
+
+{% endblock%}
+
+{% block body %}
+{% if error %}
+  <div style="text-align:center">
+    <span class="red"> SRRY looks like your credentials are not Ok. </span>
+  </div>
+{% endif %}
+<div class="container">
+  <form method="post">
+    <div class="">
+      <input type="text" name="user_name">
+      <input type="password" name="password">
+    </div>
+    <input type="submit" class="button">
+  </form>
+</div>
+
+
+{% endblock %}

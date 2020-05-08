@@ -1,13 +1,21 @@
 
-body{
+body
+{
   background: #dbd8d7;
+}
+ul
+{
+  display: block;
+}
+h1, h2
+{
+  color: #db4f0d;
+  text-align: center;
+  background-color: #9c928e;
 }
 h1
 {
   font-size: 50px;
-  color: #db4f0d;
-  text-align: center;
-  background-color: #9c928e;
 }
 img
 {
@@ -17,28 +25,134 @@ img
 
 input
 {
-    margin: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
-.button
-{
-  background-color: #ed814e;
-  width: 80px;
-  height: 70px;
-  padding: 5px;
-  margin: 3px;
-  color:red;
-  text-align: center;
-
-}
-
-.container, h1, img, .centered
+form
 {
   margin-left: auto;
   margin-right: auto;
+}
+
+input, .text
+{
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white; /*#ed814e;*/
+  border-radius: 7px;
+  background-color: #f7986a;
+  color: #e0dcdc;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 1;
+}
+
+table
+{
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+th
+{
+  color: black;
+  background-color: #f29355;
+}
+
+
+
+tr
+{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-color: #ed814e;
+  background-color: #f7986a;
+
+  border-color: white;
+  border-top-width: 7px;
+  border-top-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+}
+
+tr:hover
+{
+  color:black;
+}
+ /*color must not be defined here or it will override tr:over*/
+td, th, table
+{
+  border-color: white;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+th
+{
+  color: black;
+}
+
+a
+{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+span.red{
+  color:#d54957;
+  font-size:20px;
+  font-weight: bold
+}
+/* Set border radius*/
+.button, .container, table, tr, td
+{
+  border-radius: 7px;
+}
+
+
+.button
+{
+  background-color: #d94c61;
+  width: 80px;
+  height: 70px;
+  padding: 2px;
+  margin: 3px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-color: white; /*#ba3246;*/
+}
+
+
+.button:hover
+{
+  color:black;
+}
+
+/* The elements contained in elements of this clases are centered.*/
+/* Note that an element of this class has no need to be centered*/
+.centered
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 20px;
   background-color: #9c928e;
 }
 
@@ -47,7 +161,6 @@ input
   .container
   {
     width: 100%;
-    display:block;
   }
 }
 

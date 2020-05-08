@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block head %}
+
+{% endblock%}
+
+{% block body %}
+  <div class="container">
+    <div class="text">
+        {% if err == "no_data" %}
+        <span> you didn't complte the formulary </span>
+        <a href="/"></a>
+        {% endif %}
+
+        {% if err == "exists" %}
+        <a href={{str(isbn) + '?ignore=True'}}>
+          OVERRIDE
+        </a>
+        <a href={{str(isbn) + '?ignore=True'}}>
+
+          IGNORE
+        </a>
+        {% endif %}
+    </div>
+
+  </div>
+
+{% endblock %}

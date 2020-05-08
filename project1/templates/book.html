@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block head %}
+  <title>Book {{ isbn }} </title>
+  <style>
+    .commentInp
+    {
+      width: 90%;
+      height: 300px;
+    }
+  </style>
+
+{% endblock%}
+
+{% block body %}
+
+  <h1> {{ title }} </h1>
+  <h2>By {{ author }} </h2>
+
+  <div class="container">
+    <form method="post">
+      <input class="commentInp" type="text" name="comment" placeholder="enter your comment">
+      <br>
+      <input list="points" name="rate" class="button" placeholder="rate" style="height:70px;width:70px;opacity:80%">
+        <datalist id="points">
+          {% for i in range(6) %}
+            <option value="{{ i }}">
+          {% endfor %}
+        </datalist>
+      <input type="submit" class="button">
+    </form>
+    <div style="color:#d54957; font-size:20px; font-weight: bold">
+      <span>Total votes: {{nVotes}}</span><br>
+      <span>Average rate: {{aRate}}</span>
+    </div>
+  </div>
+
+  <div class="container">
+    {% for review in reviews %}
+      <div class="text">
+        {{ review[0] }}
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}
